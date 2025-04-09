@@ -16,10 +16,12 @@
   
   /* Header */
   header {
+    background-image: url('https://github.com/dein-nutzername/dein-repository/blob/main/Einstieg-III-1920w.jpg.webp?raw=true');
     background-color: #002b36;
     color: white;
     padding: 1rem 0;
     position: relative;
+    
   }
   
   nav {
