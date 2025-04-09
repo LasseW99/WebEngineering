@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Damit der Footer immer unten bleibt */
+  }
+  
+  /* Header */
+  header {
+    background-color: #002b36;
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+  }
+  
+  nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+    height: 40px;
+  }
+  
+  /* Menü-Container links */
+  .nav-left {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    user-select: none;
+    padding: 5px 10px;
+  }
+  
+  /* Dropdown-Menü */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003847;
+    border: 1px solid #004d5f;
+    list-style: none;
+    padding: 10px;
+    width: 250px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .dropdown li {
+    margin: 5px 0;
+  }
+  
+  .dropdown a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .dropdown a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover-Effekt für gesamtes Menü */
+  .menu-container:hover .dropdown {
+    display: flex;
+  }
+  
+  /* Titel zentriert */
+  .nav-title {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  
+  /* Hero-Bereich */
+  .hero {
+    padding: 60px 20px;
+    background: #ddd;
+    text-align: center;
+    flex: 1; /* Dieser Bereich nimmt den verfügbaren Platz ein */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #002b36;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Erzwingt das Hängenbleiben des Footers am unteren Rand */
+  }
+  
