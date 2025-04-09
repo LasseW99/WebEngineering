@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
   
   body {
@@ -16,26 +15,22 @@
   
   /* Header */
   header {
-    background-image: url('https://github.com/dein-nutzername/dein-repository/blob/main/Einstieg-III-1920w.jpg.webp?raw=true');
-    background-color: #002b36;
+    background-image: url('Einstieg-III-1920w.jpg.webp?raw=true'); /* Bild-URL */
+    background-size: cover; /* Bild skaliert, um den gesamten Header abzudecken */
+    background-position: center center; /* Bild bleibt zentriert */
     color: white;
     padding: 1rem 0;
     position: relative;
-    
+    height: 100px; /* Header-Höhe erhöhen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  nav {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0px;
-    position: relative;
-    height: 40px;
-  }
-  
-  /* Menü-Container links */
+  /* Header-Menü Container links */
   .nav-left {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -89,12 +84,12 @@
   /* Titel zentriert */
   .nav-title {
     text-align: center;
-    font-size: 1.5rem;
-    line-height: 40px;
-    position: absolute;
+    font-size: 1.8rem;
+    line-height: 60px;
+    position:relative;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap;
+    white-space: wrap;
   }
   
   /* Hero-Bereich */
@@ -102,7 +97,7 @@
     padding: 60px 20px;
     background: #ddd;
     text-align: center;
-    flex: 1; /* Dieser Bereich nimmt den verfügbaren Platz ein */
+    flex:content; /* Dieser Bereich nimmt den verfügbaren Platz ein */
   }
   
   /* Footer */
