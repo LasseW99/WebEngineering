@@ -2,150 +2,130 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
-body {
+  body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Damit der Footer immer unten bleibt */
-}
+    min-height: 100vh;
+  }
   
-/* Header */
-header {
-    background-color: #002b36; /* Hintergrundfarbe für den Header */
+  /* Header */
+  header {
+    background-color: #002b36;
     color: white;
-    padding: 1rem 0;
-    position: relative;
-    height: 100px; /* Header-Höhe erhöhen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Header-Menü Container links */
-.nav-left {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.menu-container {
-    position: relative;
-    display: inline-block;
-}
-
-.menu-button {
-    cursor: pointer;
-    font-size: 1.2rem;
-    user-select: none;
-    padding: 5px 10px;
-}
-
-/* Dropdown-Menü */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #003847;
-    border: 1px solid #004d5f;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  
+  .nav-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Menü unter Titel */
+  .nav-menu {
     list-style: none;
-    padding: 10px;
-    width: 250px;
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-}
-
-.dropdown li {
-    margin: 5px 0;
-}
-
-.dropdown a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-menu li a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-}
-
-.dropdown a:hover {
-    text-decoration: underline;
-}
-
-/* Hover-Effekt für gesamtes Menü */
-.menu-container:hover .dropdown {
-    display: flex;
-}
-
-/* Neue Bildzeile */
-.header-image-container {
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: #004d5f;
+  }
+  
+  .nav-menu li a.active {
+    background-color: #005f73;
+  }
+  
+  /* Bild unter dem Header */
+  .header-image-container {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 10px;
-}
-
-.header-image {
-    width: 100%; /* Bild nimmt die volle Breite ein */
-    max-height: 300px; /* Maximale Höhe auf 400px setzen (kann angepasst werden) */
-    object-fit: cover; /* Bild wird skaliert, um den Bereich auszufüllen, ohne das Seitenverhältnis zu verzerren */
-    border-radius: 8px; /* Optional: abgerundete Ecken */
-}
-
-/* Main-Bereich */
-main {
+  }
+  
+  .header-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Main-Bereich */
+  main {
     display: flex;
-    flex-direction: row; /* Spalten nebeneinander anordnen */
-    justify-content: space-between; /* Abstand zwischen den Spalten */
+    flex-direction: row;
+    justify-content: space-between;
     padding: 20px;
     flex: 1;
-}
-
-/* Linke Spalte */
-.left-column {
-    flex: 1; /* Nimmt den verfügbaren Platz ein */
-    background-color: #ffffff;
-    padding: 20px;
-    margin-right: 20px; /* Abstand zur rechten Spalte */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Rechte Spalte */
-.right-column {
-    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    gap: 20px;
+  }
+  
+  /* Linke Spalte */
+  .left-column {
+    flex: 1;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Titel zentriert */
-.nav-title {
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 60px;
-    position:relative;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: wrap;
-}
-
-/* Hero-Bereich */
-.hero {
-    padding: 60px 20px;
-    background: #ddd;
-    text-align: center;
-    flex:content; /* Dieser Bereich nimmt den verfügbaren Platz ein */
-}
-
-/* Footer */
-footer {
+  }
+  
+  /* Rechte Spalte */
+  .right-column {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3 sec ease;
+  }
+  
+  .right-column h2 {
+    margin-bottom: 10px;
+  }
+  .left-column:hover,
+  .right-column:hover 
+  {
+    transform: scale(1.02);
+  }
+  /* Galerie */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  footer {
     background-color: #002b36;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: auto; /* Erzwingt das Hängenbleiben des Footers am unteren Rand */
-}
+    margin-top: auto;
+  }
+  
