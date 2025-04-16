@@ -14,6 +14,16 @@
     min-height: 100vh;
   }
   
+  .invisible-link {
+    color: inherit;          /* gleiche Farbe wie der umgebende Text */
+    text-decoration: none;   /* kein Unterstrich */
+    cursor: pointer;         /* zeigt trotzdem einen Zeiger beim Hover */
+  }
+  
+  .invisible-link:hover {
+    text-decoration: none;   /* optional: beim Hover auch keinen Unterstrich */
+  }
+  
   /* Header */
   header {
     background-color: #002b36;
