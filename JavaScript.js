@@ -1,14 +1,26 @@
 function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+    const body = document.body;
+    const isDark = body.classList.toggle('dark-mode');
+    const themeToggle = document.getElementById('theme-toggle');
   
-    const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', currentTheme);
+    // Speichern des aktuellen Themas
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  
+    // Icon aktualisieren
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
   }
   
-  // Sayfa yüklendiğinde kaydedilmiş temayı uygula
+  // Beim Laden das gespeicherte Theme und Icon anwenden
   window.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+  
     if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
+      body.classList.add('dark-mode');
+      themeToggle.textContent = '☀️'; // Sonne für Dunkelmodus
+    } else {
+      themeToggle.textContent = '🌙'; // Mond für Hellmodus
     }
   });
+  
