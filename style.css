@@ -207,7 +207,7 @@ body.dark-mode #theme-toggle {
 /* Main-Bereich */
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     justify-content: space-between;
     padding: 20px;
     flex: 1;
@@ -270,9 +270,18 @@ main {
     background-color: #7c7c7c;
 }
 
+.about-and-news {
+
+    gap: 40px;
+    max-width: 80%;
+    margin: 0 auto;
+
+
+}
+
 .about {
     background-color: #fff;
-    padding: 60px 20px;
+    padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -283,10 +292,11 @@ main {
     gap: 20px;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   
   .about-content .text {
-    flex: 1 1 400px;
+    flex: 1 1 10px;
   }
   
   .about-content .image img {
@@ -349,6 +359,11 @@ main {
     padding: 60px 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 80%;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .contact-button {
@@ -365,7 +380,13 @@ main {
 .contact-button:hover {
     background-color: #e0f7fa;
 }
-
+.Youtube{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .youtube-tooltip-container {
     display: inline-block;
     position: relative;
