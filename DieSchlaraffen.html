@@ -12,16 +12,57 @@
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
   <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
   <ul class="nav-menu">
-    <li><a href="Website.html">Willekum</a></li>
-    <li><a href="DieSchlaraffen.html" class="active">Die Schlaraffen</a></li>
-    <li><a href="ÜberUns.html">Über uns</a></li>
-    <li><a href="Sippungen.html">Sippungen</a></li>
-    <li><a href="Übersetzungen.html">Übersetzungen</a></li>
-    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li class="dropdown">
+      <a href="Website.html">Willekum</a>
+      <ul class="dropdown-content">
+        <li><a href="Website.html#hero">Willkommen</a></li>
+        <li><a href="Website.html#about">Über uns</a></li>
+        <li><a href="Website.html#news">Aktuelles</a></li>
+        <li><a href="Website.html#contact">Kontakt</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="DieSchlaraffen.html" class="active">Die Schlaraffen</a>
+      <ul class="dropdown-content">
+        <li><a href="#hero">Hero</a></li>
+        <li><a href="#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
+        <li><a href="#prinzipien">Unsere Prinzipien</a></li>
+        <li><a href="#geschichte">Geschichte</a></li>
+        <li><a href="#mitmachen">Mitmachen</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="ÜberUns.html">Über uns</a>
+      <ul class="dropdown-content">
+        <li><a href="ÜberUns.html#section1">Abschnitt 1</a></li>
+        <li><a href="ÜberUns.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Sippungen.html">Sippungen</a>
+      <ul class="dropdown-content">
+        <li><a href="Sippungen.html#section1">Abschnitt 1</a></li>
+        <li><a href="Sippungen.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Übersetzungen.html">Übersetzungen</a>
+      <ul class="dropdown-content">
+        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
+        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Kontakt.html">Kontakt</a>
+      <ul class="dropdown-content">
+        <li><a href="Kontakt.html#section1">Abschnitt 1</a></li>
+        <li><a href="Kontakt.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
   </ul>
 </header>
 <!-- Hero -->
-<section class="hero">
+<section class="hero" id="hero">
     <div class="hero-content">
       <h1>Die Schlaraffen</h1>
       <p>In arte voluptas – In der Kunst liegt Lust</p>
@@ -31,7 +72,7 @@
   
 
   <!-- Was ist Schlaraffia? -->
-  <section class="about">
+  <section class="about" id="was-ist-schlaraffia">
     <div class="about-content">
       <div class="text">
         <h2>Was ist Schlaraffia?</h2>
@@ -45,7 +86,7 @@
   </section>
 
   <!-- Unsere Prinzipien -->
-  <section class="principles">
+  <section class="principles" id="prinzipien">
     <h2>Unsere Prinzipien</h2>
     <div class="principle-cards">
       <div class="card">
@@ -64,7 +105,7 @@
   </section>
 
   <!-- Geschichte im Überblick -->
-  <section class="timeline">
+  <section class="timeline" id="geschichte">
     <h2>Geschichte</h2>
     <div class="timeline-items">
       <details>
@@ -91,7 +132,7 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="contact">
+  <section class="contact" id="mitmachen">
     <h2>Mitmachen</h2>
     <p>Neugierig geworden? Werde Teil unserer Gemeinschaft und erlebe Kunst, Freundschaft und Humor live!</p>
     <a href="Kontakt.html" class="contact-button">Jetzt Kontakt aufnehmen</a>

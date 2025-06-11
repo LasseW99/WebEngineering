@@ -23,4 +23,26 @@ function toggleTheme() {
       themeToggle.textContent = '🌙'; // Mond für Hellmodus
     }
   });
-  
+
+  // Dropdown functionality
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the click from closing other dropdowns
+        const dropdownContent = this.querySelector('.dropdown-content');
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+      dropdowns.forEach(dropdown => {
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        if (dropdownContent.style.display === 'block' && !dropdown.contains(event.target)) {
+          dropdownContent.style.display = 'none';
+        }
+      });
+    });
+  });

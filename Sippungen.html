@@ -13,17 +13,57 @@
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
   <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
   <ul class="nav-menu">
-    <li><a href="Website.html">Willekum</a></li>
-    <li><a href="DieSchlaraffen.html">Die Schlaraffen</a></li>
-    <li><a href="ÜberUns.html">Über uns</a></li>
-    <li><a href="Sippungen.html" class="active">Sippungen</a></li>
-    <li><a href="Übersetzungen.html">Übersetzungen</a></li>
-    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li class="dropdown">
+      <a href="Website.html">Willekum</a>
+      <ul class="dropdown-content">
+        <li><a href="Website.html#hero">Willkommen</a></li>
+        <li><a href="Website.html#about">Über uns</a></li>
+        <li><a href="Website.html#news">Aktuelles</a></li>
+        <li><a href="Website.html#contact">Kontakt</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="DieSchlaraffen.html">Die Schlaraffen</a>
+      <ul class="dropdown-content">
+        <li><a href="DieSchlaraffen.html#hero">Hero</a></li>
+        <li><a href="DieSchlaraffen.html#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
+        <li><a href="DieSchlaraffen.html#prinzipien">Unsere Prinzipien</a></li>
+        <li><a href="DieSchlaraffen.html#geschichte">Geschichte</a></li>
+        <li><a href="DieSchlaraffen.html#mitmachen">Mitmachen</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="ÜberUns.html">Über uns</a>
+      <ul class="dropdown-content">
+        <li><a href="ÜberUns.html#section1">Abschnitt 1</a></li>
+        <li><a href="ÜberUns.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Sippungen.html" class="active">Sippungen</a>
+      <ul class="dropdown-content">
+        <li><a href="#unsere-sippungen">Unsere Sippungen</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Übersetzungen.html">Übersetzungen</a>
+      <ul class="dropdown-content">
+        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
+        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Kontakt.html">Kontakt</a>
+      <ul class="dropdown-content">
+        <li><a href="Kontakt.html#section1">Abschnitt 1</a></li>
+        <li><a href="Kontakt.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
   </ul>
 </header>
 
 <main>
-  <section class="meetings">
+  <section class="meetings" id="unsere-sippungen">
     <h2>📍 Unsere Sippungen</h2>
     <div class="meeting-info">
       <div class="meeting-item">
