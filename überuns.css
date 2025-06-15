@@ -133,7 +133,7 @@ main.content {
 }
 
 .info-card {
-    flex: 0 1 390px;
+    flex:  0 1 740px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -191,7 +191,7 @@ main.content {
 .contact, .contact-details {
     flex: 1;
     min-width: 300px;
-    background-color: #e6e6e6;
+    background-color: #f5f5f5;
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -228,7 +228,7 @@ main.content {
 /* ===== FOOTER - SUBTLER COLOR ===== */
 footer {
     background-color: #e8e8e8; /* Softer gray */
-    color: #444; /* Darker text for better contrast */
+    color: #3f3f3f; /* Darker text for better contrast */
     text-align: center;
     padding: 20px;
     border-top: 1px solid #d0d0d0; /* Subtle border */
@@ -270,22 +270,31 @@ body.dark-mode #theme-toggle {
 
 /* Dark mode content */
 body.dark-mode .first-paragraph,
-body.dark-mode .info-card,
 body.dark-mode .contact,
 body.dark-mode .contact-details {
     background-color: #333;
     color: #e0e0e0;
 }
 
-body.dark-mode .first-paragraph h2,
+body.dark-mode .info-card {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .info-card p,
+body.dark-mode .first-paragraph p {
+    color: #e0e0e0;
+}
+
 body.dark-mode .info-card h3,
+body.dark-mode .first-paragraph h2,
 body.dark-mode .contact h2,
 body.dark-mode .contact-details h2 {
     color: #80cbc4;
 }
 
 body.dark-mode .info-box {
-    background-color: #222;
+    background-color: #222 !important;
 }
 
 body.dark-mode .info-button {
