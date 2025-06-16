@@ -8,23 +8,17 @@
   <script src="JavaScript.js" defer></script>
 </head>
 <body>
-<header>
+<header class="header">
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
   <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
   <ul class="nav-menu">
     <li class="dropdown">
-      <a href="Website.html">Willekum</a>
-      <ul class="dropdown-content">
-        <li><a href="Website.html#hero">Willkommen</a></li>
-        <li><a href="Website.html#about">Über uns</a></li>
-        <li><a href="Website.html#news">Aktuelles</a></li>
-        <li><a href="Website.html#contact">Kontakt</a></li>
-      </ul>
+      <a href="Website.html" class="willekum">Willekum</a>
+     
     </li>
     <li class="dropdown">
       <a href="DieSchlaraffen.html" class="active">Die Schlaraffen</a>
       <ul class="dropdown-content">
-        <li><a href="#hero">Hero</a></li>
         <li><a href="#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
         <li><a href="#prinzipien">Unsere Prinzipien</a></li>
         <li><a href="#geschichte">Geschichte</a></li>
@@ -62,85 +56,65 @@
   </ul>
 </header>
 <!-- Hero -->
-<section class="hero" id="hero">
-    <div class="hero-content">
-      <h1>Die Schlaraffen</h1>
-      <p>In arte voluptas – In der Kunst liegt Lust</p>
-    </div>
-  </section>
+
 <main>
-  
+<div >
+<section class="sectionleft">
+<div class="sectionleftdiv"><h1 class="sectionschlaraffen">Was ist Schlaraffia</h1> 
+<p>In der Schlaraffia geht es <strong>nicht</strong> um Politik, Berufliches, Religion oder Weltanschauung.</p>
+<p>Die Schlaraffia ist weder Loge noch Service-Club, Karnevalsverein oder Ähnliches. </p>
+<p>In unserer Schlaraffia geht es seit über 160 Jahren einfach <strong>"nur"</strong> um ein niveauvolles,</p>
+<p>heiteres, entspannendes Rollenspiel um Phantasie, Freundschaft und Humor, ein Spiel,</p>
+<p>das nahzu 10.000 erwachsene Männer auf allen Kontinenten verbindet.</p>
+</div> 
+</section>
 
-  <!-- Was ist Schlaraffia? -->
-  <section class="about" id="was-ist-schlaraffia">
-    <div class="about-content">
-      <div class="text">
-        <h2>Was ist Schlaraffia?</h2>
-        <p>Die Schlaraffia ist ein weltweiter deutschsprachiger Männerbund, gegründet am 10. Oktober 1859 in Prag. Sie verfolgt die drei Säulen
-           <strong>Kunst</strong>, <strong>Freundschaft</strong> und <strong>Humor</strong> und trifft sich wöchentlich zu festlichen Sippungen im Stil mittelalterlicher Ritterspiele.</p>
-      </div>
-      <div class="image">
-        <img src="uhu-symbol.jpg" alt="Uhu als Symbol der Schlaraffia">
-      </div>
-    </div>
-  </section>
+<section class="sectionright">
+<div class="sectionrightdiv">
+<h1 class="sectionschlaraffenright">Prinzipien</h1>
+<ul>
+<li>Achtung und Respekt vor dem Mitspieler bewahren.</li>
+<li>Humor ist erwünscht, der Sarkasmus muss aber vor der Tür bleiben.</li>
+<li>Ironie ist erlaubt, darf den Mitspieler aber nie verletzen.</li>
+<li>Berufliches, Politik und Religion sind keine Spielthemen, bleiben Tabus.</li>
+<li>Unser Spiel baut auf ein tolerantes und betont freundschaftliches Miteinander.</li>
+</ul>
+</div>
+</section>
 
-  <!-- Unsere Prinzipien -->
-  <section class="principles" id="prinzipien">
-    <h2>Unsere Prinzipien</h2>
-    <div class="principle-cards">
-      <div class="card">
-        <h3>Kunst</h3>
-        <p>Kultureller Austausch, Lesungen, Musik und Theater bereichern unsere Zusammenkünfte.</p>
-      </div>
-      <div class="card">
-        <h3>Freundschaft</h3>
-        <p>Ein starkes Netzwerk von Gleichgesinnten – überall auf der Welt ist jeder Schlaraffe willkommen.</p>
-      </div>
-      <div class="card">
-        <h3>Humor</h3>
-        <p>Satire und Scherz in altertümlichem Schlaraffen‑Latein lockern den Alltag auf.</p>
-      </div>
-    </div>
-  </section>
+<section class="sectionleft">
+<div class="sectionleftdiv"><h1 class="sectionschlaraffen">Geschichte</h1>
+<p>Stellen Sie sich <strong>Prag</strong> vor über 150 Jahren vor: </p>
+<p>eine der Metropolen der <a href="https://www.geschichte-oesterreich.com/1867-1918/" target="_blank" title="Nachlesen" style="text-decoration: none;">KuK-Donau-Monarchie</a>, geprägt durch die damalige deutsch-österreichische Kultur.</p>
+<p>Eine eitle, titel- und etikettensüchtige Oberschicht bestimmt, wer zur „guten Gesellschaft“ gehört und wer nicht.</p>
+<p>Künstler des Prager Theaters wollen dieser Arroganz entgegentreten und gründen aus Protest einen Verein – unsere heutige Schlaraffia –,</p>
+<p>die spielerisch durch Übertreibung diese Zustände aufs Korn nimmt.</p>
 
-  <!-- Geschichte im Überblick -->
-  <section class="timeline" id="geschichte">
-    <h2>Geschichte</h2>
-    <div class="timeline-items">
-      <details>
-        <summary>1859: Gründung in Prag</summary>
-        <p>Albert Eilers und Kollegen gründen aus Protest gegen elitäre Künstlervereine den „Proletarier‑Club“, aus dem die Schlaraffia entsteht.</p>
-      </details>
-      <details>
-        <summary>1865 & 1872: Erste Reichs in Deutschland</summary>
-        <p>In Berlin (1865) und Leipzig (1872) entstehen die ersten deutschen Schlaraffen‑Reiche; 1876 werden gemeinsame Satzungen verabschiedet.</p>
-      </details>
-      <details>
-        <summary>1874: Erste Vereinszeitschrift</summary>
-        <p>„Der Schlaraffia Zeyttungen“ erscheint zum ersten Mal in Leipzig und begleitet die Mitglieder bis heute.</p>
-      </details>
-      <details>
-        <summary>1933–1945: Unterdrückung und Geheimtreffen</summary>
-        <p>In der NS‑Zeit und später in der DDR mussten viele Reyche schließen; oft fand man sich heimlich in Privatwohnungen.</p>
-      </details>
-      <details>
-        <summary>Nach 1950: Wiederaufbau</summary>
-        <p>Mit Unterstützung aus Nordamerika werden die europäischen Reyche wiederbelebt und neue gegründet.</p>
-      </details>
-    </div>
-  </section>
+<p>Damals wie heute geht es uns Schlaraffen um die Persiflage der alltäglichen „Wichtigkeiten“,<br>
+die wir im normalen Leben eigentlich gar nicht mehr erkennen, in denen wir aber praktisch gefangen sind.</p>
 
-  <!-- Call to Action -->
-  <section class="contact" id="mitmachen">
-    <h2>Mitmachen</h2>
-    <p>Neugierig geworden? Werde Teil unserer Gemeinschaft und erlebe Kunst, Freundschaft und Humor live!</p>
-    <a href="Kontakt.html" class="contact-button">Jetzt Kontakt aufnehmen</a>
-  </section>
+<p>Es geht darum, diese alltäglichen „Wichtigkeiten“ spielerisch zu überzeichnen,<br>
+aufzubauschen, dadurch erkennbar zu machen,<br> 
+sie durch den Kakao zu ziehen und damit uns und die Verhältnisse ein wenig auf den Arm zu nehmen,<br>
+ohne zu verletzen.</p>
+
+<p>Wer dabei erkennt,
+dass man sich selbst nicht so ernst und so wichtig nehmen sollte,<br>
+dass man auch über sich selbst lachen kann, der hat fast schon das ganze Spiel verstanden.</p>
+</div>
+</section>
+
+<section class="sectionright">
+<div class="sectionrightdiv">
+<h1 class="sectionschlaraffenright">Mitmachen</h1>
+</div>
+</section>
+</div>
+
 </main>
 
 <footer>
-  <p>&copy; Schlaraffia Flensburgia e.V. – Händelhof 7, 24944 Flensburg</p>
+  <p>&copy; Schlaraffia® und Allschlaraffia® sind eingetragene Wortmarken<br> Flensburgia e.V. - Händelhof 7, 24944 Flensburg</p>
 </footer>
 </body>
 </html>
