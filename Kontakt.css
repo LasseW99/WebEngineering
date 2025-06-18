@@ -1,0 +1,123 @@
+/* ===== KONTAKT MAIN SECTION ===== */
+main.contact-section {
+    margin-top: 140px;
+    padding: 30px 5%;
+    flex: 1;
+    background-color: transparent;
+}
+
+.contact-block {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-block h2 {
+    font-size: 1.8rem;
+    color: #004d6e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004d6e;
+    padding-bottom: 10px;
+}
+
+.contact-block p {
+    font-size: 1.05rem;
+    
+    line-height: 1.6;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Two-column layout */
+.contact-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact, .contact-details {
+    background-color: #f5f5f5;
+    padding: 16px 20px;       /* Dengeli iç boşluk */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    line-height: 1.4;
+    max-width: 600px;          /* Genişlik sınırı */
+    width: 100%;               /* Tam genişlik, max-width'e kadar */
+    height: auto;              /* İçeriğe göre yükseklik */
+    overflow: visible;         /* Taşma yok */
+}
+.contact h3, .contact-details h3 {
+    font-size: 1.25rem;
+    color: #004d6e;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+}
+
+.contact ul, .contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li, .contact-details li {
+    font-size: 0.98rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.contact a, .contact-details a {
+    color: #004d6e;
+    text-decoration: none;
+}
+
+.contact a:hover, .contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* ===== DARK MODE - Kontakt uyumu ===== */
+body.dark-mode .contact-block {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .contact-block h2 {
+    color: #80cbc4;
+    border-color: #80cbc4;
+}
+
+body.dark-mode .contact, 
+body.dark-mode .contact-details {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .contact h3,
+body.dark-mode .contact-details h3 {
+    color: #80cbc4;
+    border-color: #555;
+}
+
+body.dark-mode .contact a,
+body.dark-mode .contact-details a {
+    color: #80cbc4;
+}
+
+/* ===== RESPONSIVE - Kontakt özel ===== */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact, .contact-details {
+        width: 100%;
+    }
+
+    .contact-block {
+        padding: 20px;
+    }
+}
