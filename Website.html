@@ -5,26 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flensburgia</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="JavaScript.js" defer></script>
 </head>
 <body>
 
-<header>
+<header class="header">
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
   <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
   <ul class="nav-menu">
     <li class="dropdown">
-      <a href="Website.html" class="active">Willekum</a>
-      <ul class="dropdown-content">
-        <li><a href="#hero">Willkommen</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#news">Aktuelles</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
+    <a href="Website.html" target="_blank" class="willekum" title="Zur Startseite">Willekum</a>
+     </li>
+
+    <li class="dd dropdown">
       <a href="DieSchlaraffen.html">Die Schlaraffen</a>
-      <ul class="dropdown-content">
+      <ul class="ddl dropdown-content">
         <li><a href="DieSchlaraffen.html#hero">Hero</a></li>
         <li><a href="DieSchlaraffen.html#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
         <li><a href="DieSchlaraffen.html#prinzipien">Unsere Prinzipien</a></li>
@@ -32,7 +28,7 @@
         <li><a href="DieSchlaraffen.html#mitmachen">Mitmachen</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="ÜberUns.html">Über uns</a>
       <ul class="dropdown-content">
         <li><a href="ÜberUns.html#section1">Abschnitt 1</a></li>
@@ -65,56 +61,29 @@
 <!-- Hero Section -->
 <section class="hero" id="hero">
   <div class="hero-content">
-    <h1>Willkommen bei der Schlaraffia Flensburgia 🏰</h1>
-    <p>Kunst. Freundschaft. Humor.</p>
+    <h1>Willkommen im <span style="font-weight: 700; font-size: larger;">Reych</span> der Schlaraffia Flensburgia 🏰</h1>
+    <p style="font-weight: 800;">Ein <span style="font-size: larger;">Ort</span> an dem <span style="font-size: larger;"> Werte</span> noch ein <span style="font-size: larger;"> Wert</span> haben<br>Unpolitisch und Weltoffen</p>
     <a href="DieSchlaraffen.html" class="hero-button">Mehr erfahren</a>
   </div>
+ 
 </section>
 
-<main>
+<main class="main1 main">
+ 
+  <div class="mainContent">
+    <a href="https://www.schlaraffia.org/schlaraffen-in-ihrer-naehe/" target="_blank" class="linkIcons"><div class="mainContentline extra"><i class="fa1 fa">&#xf0ac;</i><p class="icontext">Standorte</p></div></a>
+    <a href="https://www.youtube.com/watch?v=6dRDAYkPPbY&t=1s" target="_blank" class="linkIcons"><div class="mainContentline"><i class="fa">&#xf16a;</i><p class="icontext">Schlaraffen</p></div></a>
+    <a target="_blank" class="linkIcons"><div class="mainContentline"><i  class="fa fa1 fa2">&#xf05a;</i><p class="icontext">Über uns</p></div></a>
+    <a href="Kontakt.html" class="linkIcons"><div class="mainContentline extra1" ><i class="fa fa-address-book f1 fa3"></i></i><p class="icontext">Kontakt</p></div></a>
+  </div>
+<div class="aktuelles">Aktuelles</div>
 <!-- Gemeinsamer Container für "Über uns" und "Aktuelles" -->
-    <section class="about-and-news">
-        <!-- Über uns Bereich -->
-        <div class="about" id="about">
-            <div class="about-content">
-                <div class="text">
-                    <h2>Über uns</h2>
-                    <p>Willkommen bei der Flensburgia! Wir sind eine traditionsreiche Verbindung mit offenem Geist und einem starken Gemeinschaftsgefühl.</p>
-                    <p>Erfahre mehr über uns und unsere Geschichte, indem du dir dieses kurze Video anschaust</p>
-                    <div class="Youtube">
-                        <a href="https://www.youtube.com/watch?v=DEIN_VIDEO_LINK" target="_blank" class="youtube-icon-link" title="Video ansehen">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Video" class="youtube-icon">
-                        </a>
-                    </div>
-            </div>
-        </div>
-        </div>
-    
-        <!-- Aktuelles Bereich -->
-        <div class="news-section" id="news">
-        <h2>Aktuelles</h2>
-        <div class="news-item">
-            <h3>Neue Saison</h3>
-            <p>Wir starten in die neue Saison 2025 mit spannenden Veranstaltungen und Treffen. Alle Mitglieder und Interessierte sind herzlich eingeladen!</p>
-        </div>
-        <div class="news-item">
-            <h3>Tag der offenen Tür</h3>
-            <p>Am 15. Mai öffnen wir unser Haus für alle Interessierten. Komm vorbei und lerne uns persönlich kennen!</p>
-        </div>
-        </div>
-    </section>
-
-  <!-- Kontakt -->
-  <section class="contact" id="contact">
-    <h2>Neugierig geworden?</h2>
-    <p>Dann schau dich um oder kontaktiere uns direkt!</p>
-    <a href="#" class="contact-button">Jetzt Kontakt aufnehmen</a>
-  </section>
+ 
   
 </main>
 
-<footer>
-  <p>&copy; Schlaraffia Flensburgia e.V. - Händelhof 7, 24944 Flensburg</p>
+<footer class="footer">
+  <p>&copy; Schlaraffia® und Allschlaraffia® sind eingetragene Wortmarken<br> Flensburgia e.V. - Händelhof 7, 24944 Flensburg</p>
 </footer>
 
 </body>

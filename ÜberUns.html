@@ -3,35 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns - Flensburgia</title>
+  <title>Flensburgia</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="überuns.css">
   <script src="JavaScript.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <!-- Top row: Title + Theme Toggle -->
-    <div class="header-top">
-      <h1 class="nav-title">
-        <a href="Website.html" class="invisible-link">Flensburgia</a>
-      </h1>
-      <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
-    </div>
-    
-    <!-- Navigation row: Menu Links -->
-    <nav class="nav-container">
-      <ul class="nav-menu">
-        <li><a href="Website.html">Willekum</a></li>
-        <li><a href="DieSchlaraffen.html">Die Schlaraffen</a></li>
-        <li><a href="überuns.html" class="active">Über uns</a></li>
-        <li><a href="Sippungen.html">Sippungen</a></li>
-        <li><a href="Übersetzungen.html">Übersetzungen</a></li>
-        <li><a href="Kontakt.html">Kontakt</a></li>
+<header>
+  <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
+  <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
+  <ul class="nav-menu">
+    <li class="dropdown">
+      <a href="Website.html">Willekum</a>
+      <ul class="dropdown-content">
+        <li><a href="Website.html#hero">Willkommen</a></li>
+        <li><a href="Website.html#about">Über uns</a></li>
+        <li><a href="Website.html#news">Aktuelles</a></li>
+        <li><a href="Website.html#contact">Kontakt</a></li>
       </ul>
-    </nav>
-  </header>
+    </li>
+    <li class="dropdown">
+      <a href="DieSchlaraffen.html">Die Schlaraffen</a>
+      <ul class="dropdown-content">
+        <li><a href="DieSchlaraffen.html#hero">Hero</a></li>
+        <li><a href="DieSchlaraffen.html#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
+        <li><a href="DieSchlaraffen.html#prinzipien">Unsere Prinzipien</a></li>
+        <li><a href="DieSchlaraffen.html#geschichte">Geschichte</a></li>
+        <li><a href="DieSchlaraffen.html#mitmachen">Mitmachen</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="ÜberUns.html" class="active">Über uns</a>
+      <ul class="dropdown-content">
+        <li><a href="ÜberUns.html#section1">Abschnitt 1</a></li>
+        <li><a href="ÜberUns.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Sippungen.html">Sippungen</a>
+      <ul class="dropdown-content">
+        <li><a href="Sippungen.html#unsere-sippungen">Unsere Sippungen</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Übersetzungen.html">Übersetzungen</a>
+      <ul class="dropdown-content">
+        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
+        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="Kontakt.html">Kontakt</a>
+      <ul class="dropdown-content">
+        <li><a href="Kontakt.html#section1">Abschnitt 1</a></li>
+        <li><a href="Kontakt.html#section2">Abschnitt 2</a></li>
+      </ul>
+    </li>
+  </ul>
+</header>
 
-  <main class="content">
+<main>
+     <main class="content">
     <section class="first-paragraph">
       <h2>Was ist Flensburgia?</h2>
       <p>Hier sind Sie richtig, wenn Sie in eine Welt eintauchen wollen, in der Werte noch einen Wert haben.</p>
@@ -88,10 +121,11 @@
       </section>
     </div>
   </main>
+</main>
 
-  <footer>
-    <p>&copy; Schlaraffia Flensburgia e.V. - Händelhof 7, 24944 Flensburg</p>
-  </footer>
+<footer>
+ <p>&copy; Schlaraffia® und Allschlaraffia® sind eingetragene Wortmarken<br> Flensburgia e.V. - Händelhof 7, 24944 Flensburg</p>
+</footer>
 
 </body>
 </html>
