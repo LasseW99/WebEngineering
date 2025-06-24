@@ -129,6 +129,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 100px;
 }
 
 .contact-block {
