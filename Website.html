@@ -7,22 +7,26 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="JavaScript.js" defer></script>
+  <!-- Vue CDN laden -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2" defer></script>
+<!-- Deine Vue-App -->
+  <script src="vue-app.js" defer></script>
 </head>
 <body>
 
 <header class="header">
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
-  <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
+  <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>                    <!--Darkmode-->
   <ul class="nav-menu">
-    <li class="dropdown">
-    <a href="Website.html" target="_blank" class="willekum" title="Zur Startseite">Willekum</a>
+    <li class="dd dropdown">
+    <a href="Website.html" target="_blank" class="willekum"   title="Zur Startseite">Willekum</a>
      </li>
 
-    <li class="dd dropdown">
+    <li class="dd dropdown">       <!--Dropdown Menü-->
       <a href="DieSchlaraffen.html">Die Schlaraffen</a>
       <ul class="ddl dropdown-content">
-        <li><a href="DieSchlaraffen.html#hero">Hero</a></li>
-        <li><a href="DieSchlaraffen.html#was-ist-schlaraffia">Was ist Schlaraffia?</a></li>
+        
+        <li><a href="DieSchlaraffen.html#wasistschlarrafia">Was ist Schlaraffia?</a></li>
         <li><a href="DieSchlaraffen.html#prinzipien">Unsere Prinzipien</a></li>
         <li><a href="DieSchlaraffen.html#geschichte">Geschichte</a></li>
         <li><a href="DieSchlaraffen.html#mitmachen">Mitmachen</a></li>
@@ -35,30 +39,26 @@
         <li><a href="ÜberUns.html#section2">Abschnitt 2</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="Sippungen.html">Sippungen</a>
       <ul class="dropdown-content">
         <li><a href="Sippungen.html#unsere-sippungen">Unsere Sippungen</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="Übersetzungen.html">Übersetzungen</a>
       <ul class="dropdown-content">
-        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
-        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="Kontakt.html">Kontakt</a>
       <ul class="dropdown-content">
-        <li><a href="Kontakt.html#section1">Abschnitt 1</a></li>
-        <li><a href="Kontakt.html#section2">Abschnitt 2</a></li>
       </ul>
     </li>
   </ul>
 </header>
 
-<!-- Hero Section -->
+<!-- Startseite Bild -->
 <section class="hero" id="hero">
   <div class="hero-content">
     <h1>Willkommen im <span style="font-weight: 700; font-size: larger;">Reych</span> der Schlaraffia Flensburgia 🏰</h1>
@@ -69,16 +69,27 @@
 </section>
 
 <main class="main1 main">
- 
+ <!-- Buttons -->
   <div class="mainContent">
     <a href="https://www.schlaraffia.org/schlaraffen-in-ihrer-naehe/" target="_blank" class="linkIcons"><div class="mainContentline extra"><i class="fa1 fa">&#xf0ac;</i><p class="icontext">Standorte</p></div></a>
     <a href="https://www.youtube.com/watch?v=6dRDAYkPPbY&t=1s" target="_blank" class="linkIcons"><div class="mainContentline"><i class="fa">&#xf16a;</i><p class="icontext">Schlaraffen</p></div></a>
     <a target="_blank" class="linkIcons"><div class="mainContentline"><i  class="fa fa1 fa2">&#xf05a;</i><p class="icontext">Über uns</p></div></a>
     <a href="Kontakt.html" class="linkIcons"><div class="mainContentline extra1" ><i class="fa fa-address-book f1 fa3"></i></i><p class="icontext">Kontakt</p></div></a>
   </div>
-<div class="aktuelles">Aktuelles</div>
-<!-- Gemeinsamer Container für "Über uns" und "Aktuelles" -->
- 
+
+<div id="aktuelles" class="aktuelles">
+  <h1>Aktuelles</h1>
+  <div class="aktuellesc">
+    <h2 v-for="nachricht in nachrichten" v-html="nachricht"></h2>
+  </div>
+</div>
+
+
+
+
+
+
+
   
 </main>
 

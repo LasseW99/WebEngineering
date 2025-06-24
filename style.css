@@ -4,13 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-.willekum{
+ .willekum {
     color: #070707;
-    font-weight: bold;
+    font-weight:800;
+    
 }
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background:rgb(241, 237, 237);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -155,7 +156,7 @@ body.dark-mode #theme-toggle {
 }
 
 .nav-title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
     transition: 1s;
    
@@ -229,7 +230,7 @@ main {
 
 .main-content {
     flex: 1;
-    background-color: #ffffff;
+    background-color:#a7a7a7;
     padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -354,11 +355,111 @@ div .fa{
     text-decoration: none;
 }
 
+/*Aktuelles -mainpage-*/
 .aktuelles{
-    text-align: center;
-    width: 100%;
+    display: block;
+    justify-items: center;
+}
+.aktuellesc{
+    width: 1100px;
+    height: 300px;
+    background-color: white;
+    border-radius: 14px;
+
+
 }
 
+.aktuelles .aktuellesp{
+
+text-align: center;
+}
+
+body.dark-mode .aktuellesc{
+    background-color:#7c7c7c;
+}
+
+
+/*Sippungen*/
+.sippungen{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sippungencontainer{
+    width: 1000px;
+    height: 500px; 
+    margin-bottom: 40px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.picsippungen{
+    width: 450px;
+    height: 450px;
+    border-radius: 17px;
+    background-color: #7c7c7c;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+.buttonright{
+    
+    height: 90px;
+    width: 120px;
+    background-color: #444;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 100px;
+    
+}
+
+.buttonleft{
+    
+    height: 90px;
+    width: 120px;
+    margin-top: 150px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.scipbutton{
+    height: 100px;
+    width: 110px;
+    border-radius: 20px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    transition: 500ms;
+}
+
+.scipbutton:hover{
+    background-color: rgb(179, 78, 78);
+
+}
+
+.Sippungsbilder{
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.text_sippung{
+font-size: large;
+font-weight: bold;
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+}
 
 /*Schlaraffen*/
 
@@ -391,6 +492,7 @@ right:0%;
 .sectionleft{
 position: relative;
 left: 0%;
+width: 100%;
 }
 
 .sectionleftdiv{
@@ -404,8 +506,26 @@ left: 0%;
     font-size: 20px;
     border-radius: 10px;
 }
-
-
+.schlarraffia_pic{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+   
+    
+}
+.img_pic{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+}
+.schlarraffen_mitmachencontainer{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
   
 /* Footer */
 footer {
@@ -423,7 +543,12 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
+    padding-bottom: 0%;
     
+}
+.dd{
+    font-size: 20px;
+    font-weight: bold;
 }
 .dd:hover{
     font-size: 20px;
@@ -478,3 +603,50 @@ body.dark-mode .dropdown-content li a:hover {
     background-color: #555;
     
 }
+
+/*Übersetzung*/
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    select {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .term {
+      margin-bottom: 20px;
+    }
+
+    .term h2 {
+      color: #37474f;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      margin: 0;
+      color: #333;
+    }
+
+    [lang="ar"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .invisible-link {
+      color: white;
+      text-decoration: none;
+    }
+

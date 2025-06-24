@@ -6,6 +6,8 @@
   <title>Flensburgia</title>
   <link rel="stylesheet" href="style.css">
   <script src="JavaScript.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"defer ></script>
+    <script src="vue-app.js" defer></script>
 </head>
 <body>
 
@@ -48,8 +50,6 @@
     <li class="dropdown">
       <a href="Übersetzungen.html">Übersetzungen</a>
       <ul class="dropdown-content">
-        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
-        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -63,19 +63,13 @@
 </header>
 
 <main>
-  <section class="meetings" id="unsere-sippungen">
-    <h2>📍 Unsere Sippungen</h2>
-    <div class="meeting-info">
-      <div class="meeting-item">
-        <h3>Ort</h3>
-        <p>Händelhof 7, 24944 Flensburg</p>
-      </div>
-      <div class="meeting-item">
-        <h3>Zeit</h3>
-        <p>Oktober bis April, donnerstags ab 20 Uhr</p>
-      </div>
-    </div>
-  </section>
+<div class="sippungen">
+<div class="sippungencontainer" id="app"><div class="buttonleft" ><button @click="zurueck" class="scipbutton">«</button></div> <div class="picsippungen"><img class="Sippungsbilder" :src="aktuellesBild" alt="slideshow Bild"><div class="text_sippung">Sippung 3178<br>Eine Sippung mit lieben Freunden und Verleihung verschiedener Orden und Titel.</div></div> <div class="buttonright"><button @click="vor" class="scipbutton">»</button></div> </div>
+<div class="sippungencontainer" id="app1"><div class="buttonleft" ><button @click="zurueck" class="scipbutton">«</button></div> <div class="picsippungen"><img class="Sippungsbilder" :src="aktuellesBild" alt="slideshow Bild"><div class="text_sippung">Sippung 3178<br>Eine Sippung mit lieben Freunden und Verleihung verschiedener Orden und Titel.</div></div> <div class="buttonright"><button @click="vor" class="scipbutton">»</button></div> </div>
+<div class="sippungencontainer" id="app"><div class="buttonleft" ><button @click="zurueck" class="scipbutton">«</button></div> <div class="picsippungen"><img class="Sippungsbilder" :src="aktuellesBild" alt="slideshow Bild"><div class="text_sippung">Sippung 3178<br>Eine Sippung mit lieben Freunden und Verleihung verschiedener Orden und Titel.</div></div> <div class="buttonright"><button @click="vor" class="scipbutton">»</button></div> </div>
+<div class="sippungencontainer" id="app"><div class="buttonleft" ><button @click="zurueck" class="scipbutton">«</button></div> <div class="picsippungen"><img class="Sippungsbilder" :src="aktuellesBild" alt="slideshow Bild"><div class="text_sippung">Sippung 3178<br>Eine Sippung mit lieben Freunden und Verleihung verschiedener Orden und Titel.</div></div> <div class="buttonright"><button @click="vor" class="scipbutton">»</button></div> </div>
+  
+ </div>
 </main>
 
 <footer>
