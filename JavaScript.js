@@ -47,9 +47,7 @@ function toggleTheme() {
     });
   });
 
-<<<<<<< HEAD
-=======
-   const translations = {
+const translations = {
       de: {
         title: "Schlaraffia Lexikon",
         subtitle: "Begriffe & Erklärungen",
@@ -156,8 +154,3 @@ function toggleTheme() {
         term.style.display = title.includes(filter) ? "" : "none";
       });
     }
-
-
-
-
->>>>>>> 922ad4c3e0d4320bee266bd9ee2aeecda0de8298
