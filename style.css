@@ -3,19 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-.willekum{
+ .willekum {
     color: #070707;
-    font-weight: bold;
+    font-size: 25px;
+    
 }
 body {
     font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background:rgb(241, 237, 237);
     color: #333;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
     transition: background-color 0.4s ease, color 0.4s ease; /* just for dark mode */
+    border-radius: 50px;
 }
 
 /* Dark Mode */
@@ -55,6 +58,7 @@ body.dark-mode footer {
 body.dark-mode .hero {
     background: url('Einstieg-III-1920w.jpg.webp') no-repeat center center/cover;
     background-color: rgba(0, 43, 54, 0.7); /* leicht dunklere Verdunkelung */
+    
 }
 
 body.dark-mode .hero-content h1 {
@@ -131,6 +135,7 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding-bottom: 0%;
     
+    
 }
 
 #theme-toggle {
@@ -155,7 +160,7 @@ body.dark-mode #theme-toggle {
 }
 
 .nav-title {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
     transition: 1s;
    
@@ -179,6 +184,8 @@ body.dark-mode #theme-toggle {
     justify-content: center;
     gap: 10px;
     padding: 0.5rem 0;
+    align-items: center;
+    
 }
 
 .nav-menu li a {
@@ -203,6 +210,7 @@ body.dark-mode #theme-toggle {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    
 }
 
 .header-image {
@@ -210,6 +218,7 @@ body.dark-mode #theme-toggle {
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
+    
 }
 
 /* Main-Bereich */
@@ -229,7 +238,7 @@ main {
 
 .main-content {
     flex: 1;
-    background-color: #ffffff;
+    background-color:#a7a7a7;
     padding: 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -237,27 +246,37 @@ main {
 
 /* Hero Section */
 .hero {
-    background: url('Einstieg-III-1920w.jpg.webp') no-repeat center center/cover;
-    height: 90vh;
+    background: url('Einstieg-III-1920w.jpg') no-repeat center center/cover;
+    
+    height: 70vh;
+    width: 1100px;
+    border-radius: 50px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    align-content: center;
     color: white;
     position: relative;
+    box-shadow: 10px 10px 10px slategray;
 }
 
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 43, 54, 0.6); /* leichte Verdunkelung */
+     background-color: rgba(0, 43, 54, 0.6);
+    border-radius: 50px;
+    
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    
+    
 }
 
 .hero-content h1 {
@@ -268,6 +287,7 @@ main {
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    
 }
 
 .hero-button {
@@ -281,16 +301,17 @@ main {
 }
 
 /* Main-Bereich */
-.mainContentline{
-    width: 170px;
-    height: 150px;
-    background-color: white;
-    display: block;
-    text-align: center;
-     transition-duration: 0.5s;
-    
-    
+.mainContentline {
+  width: 170px;
+  height: 150px;
+  background-color: white;
+  display: block;
+  text-align: center;
+  box-shadow: 10px 10px 10px #888888;
 }
+
+
+
 .mainContentline:hover{
     background-color: red;
     cursor: pointer;
@@ -307,11 +328,11 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
     width: 100%;
     height: 200px;
-   	
-}
+            }
+
+
 div .fa{
     color:red;
     font-size: 100px;
@@ -354,11 +375,114 @@ div .fa{
     text-decoration: none;
 }
 
+/*Aktuelles -mainpage-*/
 .aktuelles{
+    display: block;
+    justify-items: center;
+}
+.aktuellesc{
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 10px 10px 10px #888888;
     text-align: center;
-    width: 100%;
+
 }
 
+.aktuelles .aktuellesp{
+
+text-align: center;
+}
+
+body.dark-mode .aktuellesc{
+    background-color:#7c7c7c;
+}
+
+
+/*Sippungen*/
+.sippungen{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sippungencontainer{
+    width: 1000px;
+    height: 500px; 
+    margin-bottom: 40px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.picsippungen{
+    width: 700px;
+    height: 450px;
+    border-radius: 17px;
+    background-color: #7c7c7c;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+}
+.buttonright{
+    
+    height: 90px;
+    width: 120px;
+    background-color: #444;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 100px;
+    
+}
+
+.buttonleft{
+    
+    height: 90px;
+    width: 120px;
+    margin-top: 150px;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.scipbutton{
+    height: 100px;
+    width: 110px;
+    border-radius: 20px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: 500ms;
+    box-shadow: 10px 10px 10px rgb(52, 55, 58);
+}
+
+.scipbutton:hover{
+    background-color: rgb(179, 78, 78);
+
+}
+
+.Sippungsbilder{
+    width: 700px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(52, 55, 58);
+}
+
+.text_sippung{
+font-size: large;
+font-weight: bold;
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+}
 
 /*Schlaraffen*/
 
@@ -372,14 +496,18 @@ div .fa{
     
 }
 .sectionright{
-justify-items: right;
-width: 100%;
+display: flex;
+justify-content:flex-end ;
+
 position: relative;
-right:0%;
+
+margin-top: 40px;
 }
 .sectionrightdiv{
     justify-items: left;
     transition: 500ms;
+    box-shadow: 10px 10px 10px slategray;
+    width: fit-content;
 }
 .sectionrightdiv:hover {
     background-color: rgb(190, 188, 188);
@@ -389,23 +517,44 @@ right:0%;
 
 
 .sectionleft{
+display: flex;
 position: relative;
-left: 0%;
+
+margin-top: 40px;
 }
 
 .sectionleftdiv{
     transition: 500ms;
     position: relative;
-    left: 0%;
+    width: 50%;
     width: fit-content;
+    box-shadow: 10px 10px 10px slategray;
 }
 .sectionleftdiv:hover {
     background-color: rgb(190, 188, 188);
     font-size: 20px;
     border-radius: 10px;
 }
-
-
+.schlarraffia_pic{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+   
+    
+}
+.img_pic{
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+}
+.schlarraffen_mitmachencontainer{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
   
 /* Footer */
 footer {
@@ -423,14 +572,24 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
+    padding-bottom: 0%;
+   
+    
+}
+.dd{
+    font-size: 20px;
+    font-weight: bold;
+    
     
 }
 .dd:hover{
     font-size: 20px;
+    
 }
 
 .ddl{
     font-size: 17px;
+    
 }
 
 .dropdown-content {
@@ -477,4 +636,153 @@ body.dark-mode .dropdown-content li a {
 body.dark-mode .dropdown-content li a:hover {
     background-color: #555;
     
+}
+/* Contact section */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 38px;
+    box-shadow: 10px 10px 10px rgb(52, 55, 58);
+}
+
+.contact, .contact-details {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2, .contact-details h2 {
+    font-size: 1.28rem;
+    color: #004d6e;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact ul, .contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li, .contact-details li {
+    margin-bottom: 11px;
+    line-height: 1.5;
+    font-size: 0.97rem;
+}
+
+.contact a, .contact-details a {
+    color: #004d6e;
+    text-decoration: none;
+}
+
+.contact a:hover, .contact-details a:hover {
+    text-decoration: underline;
+}
+/*Übersetzung*/
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    select {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .term {
+      margin-bottom: 20px;
+    }
+
+    .term h2 {
+      color: #37474f;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      margin: 0;
+      color: #333;
+    }
+
+    [lang="ar"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .invisible-link {
+      color: white;
+      text-decoration: none;
+    }
+
+/* Info box with balanced card sizes */
+.info-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    padding: 30px 20px;
+    background-color: #f5f7fa;
+    margin-top: 25px;
+}
+
+.info-card {
+    flex:  0 1 740px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 26px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    color: #004d6e;
+    margin-bottom: 15px;
+    font-size: 1.35rem;
+}
+
+.info-card p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    color: #333;
+    flex-grow: 1;
+}
+
+.info-button {
+    display: inline-block;
+    background-color: #004d6e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 77, 110, 0.3);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.info-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 77, 110, 0.5);
+    background-color: #0066cc;
 }

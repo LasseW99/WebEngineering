@@ -11,18 +11,13 @@
 
 <header>
   <h1 class="nav-title"><a href="Website.html" class="invisible-link">Flensburgia</a></h1>
-  <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button>
+  <button onclick="toggleTheme()" id="theme-toggle">🌙 / ☀️</button> <!-- Darkmode -->
   <ul class="nav-menu">
-    <li class="dropdown">
-      <a href="Website.html">Willekum</a>
-      <ul class="dropdown-content">
-        <li><a href="Website.html#hero">Willkommen</a></li>
-        <li><a href="Website.html#about">Über uns</a></li>
-        <li><a href="Website.html#news">Aktuelles</a></li>
-        <li><a href="Website.html#contact">Kontakt</a></li>
-      </ul>
+    <li class="dd dropdown">
+      <a href="Website.html" class="willekum">Willekum</a>
+      
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="DieSchlaraffen.html">Die Schlaraffen</a>
       <ul class="dropdown-content">
         <li><a href="DieSchlaraffen.html#hero">Hero</a></li>
@@ -32,38 +27,91 @@
         <li><a href="DieSchlaraffen.html#mitmachen">Mitmachen</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="ÜberUns.html">Über uns</a>
       <ul class="dropdown-content">
         <li><a href="ÜberUns.html#section1">Abschnitt 1</a></li>
         <li><a href="ÜberUns.html#section2">Abschnitt 2</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="Sippungen.html">Sippungen</a>
       <ul class="dropdown-content">
         <li><a href="Sippungen.html#unsere-sippungen">Unsere Sippungen</a></li>
       </ul>
     </li>
-    <li class="dropdown">
+    <li class="dd dropdown">
       <a href="Übersetzungen.html" class="active">Übersetzungen</a>
-      <ul class="dropdown-content">
-        <li><a href="Übersetzungen.html#section1">Abschnitt 1</a></li>
-        <li><a href="Übersetzungen.html#section2">Abschnitt 2</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
+      </li>
+    <li class="dd dropdown">
       <a href="Kontakt.html">Kontakt</a>
-      <ul class="dropdown-content">
-        <li><a href="Kontakt.html#section1">Abschnitt 1</a></li>
-        <li><a href="Kontakt.html#section2">Abschnitt 2</a></li>
-      </ul>
-    </li>
+      </li>
   </ul>
 </header>
 
 <main>
-    
+  <select id="language-selector">   <!--Sprachen auswahl zur Übersetzung-->
+    <option value="de">Deutsch</option>
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+  </select>
+
+  <input type="text" id="search" placeholder="Begriff suchen..." onkeyup="filterTerms()" />
+
+  <div class="term">
+    <h2 data-key="term1_title">Schlaraffia</h2>
+    <p data-key="term1_desc">Ein Männerbund mit Humor, Kunst, Freundschaft und eigenen Ritualen.</p>
+  </div>
+    <div class="term" data-key="term2">
+      <h2 data-key="term2-title">Reych</h2>
+      <p data-key="term2-desc">Die Bezeichnung für eine lokale Gruppe innerhalb der Schlaraffia.</p>
+    </div>
+
+    <div class="term" data-key="term3">
+      <h2 data-key="term3-title">Sippung</h2>
+      <p data-key="term3-desc">Zeremonielles Treffen der Schlaraffen mit festen Regeln und Beiträgen.</p>
+    </div>
+
+    <div class="term" data-key="term4">
+      <h2 data-key="term4-title">Oberschlaraffe</h2>
+      <p data-key="term4-desc">Ein Führungsamt innerhalb des Reychs.</p>
+    </div>
+
+    <div class="term" data-key="term5">
+      <h2 data-key="term5-title">Allschlaraffia</h2>
+      <p data-key="term5-desc">Die weltweite Gemeinschaft aller Schlaraffen-Reyche.</p>
+    </div>
+
+    <div class="term" data-key="term6">
+      <h2 data-key="term6-title">Uhu</h2>
+      <p data-key="term6-desc">Wappentier der Schlaraffia, steht für Weisheit.</p>
+    </div>
+
+    <div class="term" data-key="term7">
+      <h2 data-key="term7-title">Junker</h2>
+      <p data-key="term7-desc">Ein Mitglied auf dem Weg zum Ritter.</p>
+    </div>
+
+    <div class="term" data-key="term8">
+      <h2 data-key="term8-title">Burg</h2>
+      <p data-key="term8-desc">Der Versammlungsort der Schlaraffen.</p>
+    </div>
+
+    <div class="term" data-key="term9">
+      <h2 data-key="term9-title">Fechsung</h2>
+      <p data-key="term9-desc">Ein künstlerischer oder literarischer Beitrag während der Sippung.</p>
+    </div>
+
+    <div class="term" data-key="term10">
+      <h2 data-key="term10-title">Ritterspiel</h2>
+      <p data-key="term10-desc">Eine besondere Veranstaltung zur Aufnahme oder Ehrung von Mitgliedern.</p>
+    </div>
+
+    <div class="term" data-key="term11">
+      <h2 data-key="term11-title">Sommerung</h2>
+      <p data-key="term11-desc">Sommerzeit.</p>
+    </div>
+ 
 </main>
 
 <footer>
