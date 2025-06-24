@@ -1,25 +1,87 @@
-/* ===== RESET & GLOBAL STYLES ===== */
+/* ===== 0. CSS VARIABLEN ===== */
+:root {
+    /* Allgemeine Farben */
+    --primary-color: #0066cc;
+    --secondary-color: #004d6e;
+    --text-color: #333;
+    --light-text-color: #e0e0e0;
+    --background-light: #f4f4f4;
+    --background-medium: #f5f7fa;
+    --background-dark: #e8e8e8;
+    --border-color-light: #d0d0d0;
+
+    /* Header Farben */
+    --header-bg: #f0f0f0;
+    --header-shadow: rgba(0, 0, 0, 0.2);
+
+    /* Dark Mode Farben */
+    --dark-mode-bg: #111;
+    --dark-mode-header-bg: #222;
+    --dark-mode-footer-bg: #2a2a2a;
+    --dark-mode-element-bg: #333;
+    --dark-mode-text: #e0e0e0;
+    --dark-mode-light-text: #bbb;
+    --dark-mode-border: #444;
+    --dark-mode-button-hover: #0088ff;
+
+    /* Schriftarten */
+    --font-primary: 'Arial', sans-serif;
+
+    /* Abstände */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+/* ===== 1. RESET UND ALLGEMEINE STILE ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    font-family: var(--font-primary);
+    background: var(--background-light);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: 
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+    line-height: 1.6;
 }
 
-/* ===== HEADER STYLES ===== */
+/* ===== 2. PERFORMANCE & ANIMATIONEN ===== */
+.info-card, 
+.first-paragraph,
+#theme-toggle {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== 3. HEADER STILE ===== */
 header {
-    background-color: #f0f0f0;
-    color: black;
-    padding: 1rem 0;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: var(--spacing-sm) 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,9 +91,10 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px var(--header-shadow);
 }
 
+/* Theme Toggle mit Animation */
 #theme-toggle {
     position: absolute;
     top: 10px;
@@ -41,28 +104,32 @@ header {
     padding: 8px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #333;
-    transition: transform 0.2s;
+    color: var(--text-color);
+    transition: transform 0.2s ease;
 }
+
+
+
 
 #theme-toggle:hover {
     transform: scale(1.1);
 }
 
 .nav-title {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
 }
+
 .nav-title a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav-title a:hover {
     color: #7c7c7c;
 }
 
-/* Navigation menu */
 .nav-menu {
     list-style: none;
     display: flex;
@@ -73,16 +140,20 @@ header {
 }
 
 .nav-menu li a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     padding: 8px 14px;
     border-radius: 6px;
-    transition: background-color 0.3s;
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease,
+        transform 0.2s ease;
 }
 
 .nav-menu li a:hover {
     background-color: #7c7c7c;
     color: white;
+    transform: translateY(-2px);
 }
 
 .nav-menu li a.active {
@@ -90,158 +161,209 @@ header {
     color: white;
 }
 
-/* ===== MAIN CONTENT - BALANCED DESIGN ===== */
+/* ===== 4. MAIN CONTENT STILE ===== */
 main.content {
-    margin-top: 140px;
-    padding: 20px 5%;
+    margin-top: 180px;
+    padding: var(--spacing-lg) 5%;
     flex: 1;
+    padding-bottom: 120px;
 }
 
-/* First paragraph - optimized */
+/* Einblend-Animation für Inhaltselemente */
+.info-card, 
+.first-paragraph {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* "Was ist Flensburgia?" Box mit Design-Updates */
 .first-paragraph {
     background-color: #ffffff;
-    border-left: 8px solid #0066cc;
-    padding: 28px 35px;
-    margin: 25px auto 35px;
+    border-left: 8px solid var(--primary-color);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-lg) auto var(--spacing-xl);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     max-width: 90%;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.first-paragraph::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 150px;
+    height: 150px;
+    background: rgba(0,102,204,0.08);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .first-paragraph h2 {
-    font-size: 1.8rem;
-    color: #004d6e;
-    margin-bottom: 18px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color-light);
+    position: relative;
+    z-index: 1;
 }
 
 .first-paragraph p {
-    font-size: 1.08rem;
-    margin-bottom: 14px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+    max-inline-size: 75ch;
+    margin-inline: auto;
 }
 
-/* Info box with balanced card sizes */
+/* Info Box Bereich */
 .info-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 28px;
-    padding: 30px 20px;
-    background-color: #f5f7fa;
-    margin-top: 25px;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: var(--background-medium);
+    margin-top: var(--spacing-lg);
+    border-radius: 15px;
 }
 
+/* Info Cards */
 .info-card {
-    flex:  0 1 740px;
+    flex: 0 1 740px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 26px;
+    padding: var(--spacing-lg);
     text-align: center;
-    transition: transform 0.2s ease;
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .info-card h3 {
-    color: #004d6e;
-    margin-bottom: 15px;
-    font-size: 1.35rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
 }
 
 .info-card p {
-    font-size: 1.05rem;
-    margin-bottom: 18px;
-    color: #333;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
     flex-grow: 1;
+    max-inline-size: 65ch;
+    margin-inline: auto;
 }
 
+/* Moderner Button mit Farbverlauf */
 .info-button {
     display: inline-block;
-    background-color: #004d6e;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 77, 110, 0.3);
-    font-size: 1rem;
-    margin-top: 8px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    margin-top: var(--spacing-xs);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.info-button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+    z-index: -1;
+    opacity: 0;
 }
 
 .info-button:hover {
-    box-shadow: 0 6px 12px rgba(0, 77, 110, 0.5);
-    background-color: #0066cc;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 77, 110, 0.5);
 }
 
-/* Contact section */
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 38px;
+.info-button:hover::after {
+    opacity: 1;
+    transform: rotate(30deg) translate(20%, 20%);
 }
 
-.contact, .contact-details {
-    flex: 1;
-    min-width: 300px;
-    background-color: #f5f5f5;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact h2, .contact-details h2 {
-    font-size: 1.28rem;
-    color: #004d6e;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #ccc;
-}
-
-.contact ul, .contact-details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact li, .contact-details li {
-    margin-bottom: 11px;
-    line-height: 1.5;
-    font-size: 0.97rem;
-}
-
-.contact a, .contact-details a {
-    color: #004d6e;
-    text-decoration: none;
-}
-
-.contact a:hover, .contact-details a:hover {
-    text-decoration: underline;
-}
-
-/* ===== FOOTER - SUBTLER COLOR ===== */
+/* ===== 5. FOOTER STILE ===== */
 footer {
-    background-color: #e8e8e8; /* Softer gray */
-    color: #3f3f3f; /* Darker text for better contrast */
+    background-color: var(--background-dark);
+    color: var(--text-color);
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid #d0d0d0; /* Subtle border */
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--border-color-light);
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-/* ===== DARK MODE ===== */
+/* ===== 6. DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: var(--dark-mode-text);
+        --background-light: var(--dark-mode-bg);
+        --background-medium: var(--dark-mode-header-bg);
+        --background-dark: var(--dark-mode-footer-bg);
+        --header-bg: var(--dark-mode-header-bg);
+        --border-color-light: var(--dark-mode-border);
+    }
+}
+
 body.dark-mode {
-    background-color: #111;
-    color: #e0e0e0;
+    background-color: var(--dark-mode-bg);
+    color: var(--dark-mode-text);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(40,40,40,0.8) 0%, transparent 15%),
+        radial-gradient(circle at 90% 80%, rgba(60,60,60,0.6) 0%, transparent 10%);
 }
 
 body.dark-mode header {
-    background-color: #222;
+    background-color: var(--dark-mode-header-bg);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .nav-title a {
@@ -249,7 +371,7 @@ body.dark-mode .nav-title a {
 }
 
 body.dark-mode .nav-menu li a {
-    color: #ddd;
+    color: var(--dark-mode-light-text);
 }
 
 body.dark-mode .nav-menu li a.active,
@@ -259,105 +381,168 @@ body.dark-mode .nav-menu li a:hover {
 }
 
 body.dark-mode footer {
-    background-color: #2a2a2a; /* Darker gray */
-    color: #bbb; /* Softer text color */
-    border-top-color: #444;
+    background-color: var(--dark-mode-footer-bg);
+    color: var(--dark-mode-light-text);
+    border-top-color: var(--dark-mode-border);
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode #theme-toggle {
     color: #ccc;
 }
 
-/* Dark mode content */
-body.dark-mode .first-paragraph,
-body.dark-mode .contact,
-body.dark-mode .contact-details {
-    background-color: #333;
-    color: #e0e0e0;
+body.dark-mode .first-paragraph {
+    background-color: var(--dark-mode-element-bg);
+    color: var(--dark-mode-text);
+    border-color: var(--dark-mode-border);
+    border-left-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
 }
 
-body.dark-mode .info-card {
-    background-color: #333 !important;
-    color: #e0e0e0 !important;
+body.dark-mode .first-paragraph::before {
+    background: rgba(0,102,204,0.15);
 }
 
-body.dark-mode .info-card p,
+body.dark-mode .first-paragraph h2 {
+    color: var(--primary-color);
+    border-bottom-color: var(--dark-mode-border);
+}
+
 body.dark-mode .first-paragraph p {
-    color: #e0e0e0;
-}
-
-body.dark-mode .info-card h3,
-body.dark-mode .first-paragraph h2,
-body.dark-mode .contact h2,
-body.dark-mode .contact-details h2 {
-    color: #80cbc4;
+    color: var(--dark-mode-text);
 }
 
 body.dark-mode .info-box {
-    background-color: #222 !important;
+    background-color: var(--dark-mode-header-bg);
+}
+
+body.dark-mode .info-card {
+    background-color: var(--dark-mode-element-bg);
+    color: var(--dark-mode-text);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .info-card p {
+    color: var(--dark-mode-text);
+}
+
+body.dark-mode .info-card h3 {
+    color: var(--primary-color);
 }
 
 body.dark-mode .info-button {
-    background-color: #0066cc;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #004080 100%);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
 }
 
 body.dark-mode .info-button:hover {
-    background-color: #0088ff;
+    box-shadow: 0 8px 15px rgba(0, 102, 204, 0.5);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== 7. ACCESSIBILITY ===== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --primary-color: #004080;
+        --secondary-color: #003050;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ===== 8. RESPONSIVES DESIGN ===== */
 @media (max-width: 900px) {
     .info-card {
         flex: 0 1 100%;
         max-width: 580px;
     }
+    main.content {
+        padding-bottom: 100px;
+    }
+    .first-paragraph {
+        max-width: 95%; 
+        padding: var(--spacing-lg); 
+    }
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: var(--spacing-sm) 2%;
+    }
     .nav-menu {
         gap: 5px;
         font-size: 0.9rem;
     }
-    
     .nav-menu li a {
         padding: 6px 10px;
     }
-    
     main.content {
         margin-top: 160px;
+        padding: var(--spacing-lg) 4%;
+        padding-bottom: 90px;
     }
-    
     .first-paragraph {
-        padding: 22px;
-        max-width: 95%;
+        padding: var(--spacing-md);
+        max-width: 98%; 
     }
-    
-    .contact-container {
-        margin-top: 28px;
+    .info-box {
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    .info-card {
+        padding: var(--spacing-md);
     }
 }
 
 @media (max-width: 480px) {
+    #theme-toggle {
+        top: 8px;
+        right: 8px;
+        font-size: 1.3rem;
+        padding: 6px;
+    }
     .nav-menu {
         flex-direction: column;
         align-items: center;
         gap: 5px;
     }
-    
+    .nav-menu li a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
     main.content {
         margin-top: 200px;
+        padding: var(--spacing-md) 3%;
+        padding-bottom: 80px;
     }
-    
-    .contact, .contact-details {
-        min-width: 100%;
+    .first-paragraph {
+        padding: var(--spacing-sm);
     }
-    
     .info-box {
-        padding: 20px 15px;
-        gap: 20px;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
     }
-    
     .info-card {
-        padding: 22px;
+        padding: var(--spacing-md);
+    }
+    .info-button {
+        padding: 10px 20px;
     }
 }

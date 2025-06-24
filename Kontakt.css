@@ -1,61 +1,198 @@
-/* ===== KONTAKT MAIN SECTION ===== */
-main.contact-section {
-    margin-top: 140px;
-    padding: 30px 5%;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #004d6e;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-title {
+    margin: 0;
+}
+
+.nav-title a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.nav-title a:hover {
+    opacity: 0.8;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #e0e0e0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #004d6e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content li a:hover {
+    background-color: #006080;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-menu li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+#theme-toggle {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+main {
     flex: 1;
+    margin-top: 100px;
+    padding: 30px 5%;
     background-color: transparent;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .contact-block {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    max-width: 1100px;
-    margin: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 50px auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.contact-block.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .contact-block h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #004d6e;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #004d6e;
-    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #004d6e;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 .contact-block p {
-    font-size: 1.05rem;
-    
-    line-height: 1.6;
-    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
     margin-top: 20px;
-}
-
-/* Two-column layout */
-.contact-container {
-    display: flex;
-    flex-direction: column; 
-    gap: 30px;
-    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 .contact, .contact-details {
-    background-color: #f5f5f5;
-    padding: 16px 20px;       /* Dengeli iç boşluk */
+    background-color: #eff1f1; /* İstenen açık mavi tonu */
+    color: #333; /* Okunabilirlik için koyu metin rengi */
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
-    line-height: 1.4;
-    max-width: 600px;          /* Genişlik sınırı */
-    width: 100%;               /* Tam genişlik, max-width'e kadar */
-    height: auto;              /* İçeriğe göre yükseklik */
-    overflow: visible;         /* Taşma yok */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    line-height: 1.5;
+    flex: 1;
+    min-width: 300px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Hafif çerçeve */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+.contact:hover, .contact-details:hover {
+    background-color: #c0d1da; /* Hover'da hafifçe daha koyu */
+    border-color: #004d6e; /* Hover'da mavi çerçeve */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Hover'da belirgin gölge */
+}
+
 .contact h3, .contact-details h3 {
-    font-size: 1.25rem;
-    color: #004d6e;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
+    font-size: 1.6rem;
+    color: #004d6e; /* Başlık rengi ana mavi */
+    margin-bottom: 18px;
+    border-bottom: 2px solid #a8d9ec; /* Açık mavi alt çizgi */
+    padding-bottom: 10px;
 }
 
 .contact ul, .contact-details ul {
@@ -64,24 +201,61 @@ main.contact-section {
 }
 
 .contact li, .contact-details li {
-    font-size: 0.98rem;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333; /* Metin rengi koyu kalmalı */
 }
 
 .contact a, .contact-details a {
-    color: #004d6e;
+    color: #004d6e; /* Link rengi ana mavi */
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .contact a:hover, .contact-details a:hover {
+    color: #007bff; /* Link hover rengi */
     text-decoration: underline;
 }
 
 /* ===== DARK MODE - Kontakt uyumu ===== */
+body.dark-mode {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .nav-title a,
+body.dark-mode .nav-menu li a,
+body.dark-mode .dropdown-content li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-menu li a:hover {
+    color: #80cbc4;
+}
+
+body.dark-mode .nav-menu li a.active {
+    border-bottom-color: #80cbc4;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-mode #theme-toggle:hover {
+    background-color: #555;
+}
+
 body.dark-mode .contact-block {
     background-color: #333;
     color: #e0e0e0;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
 }
 
 body.dark-mode .contact-block h2 {
@@ -89,11 +263,22 @@ body.dark-mode .contact-block h2 {
     border-color: #80cbc4;
 }
 
-body.dark-mode .contact, 
+body.dark-mode .contact-block p {
+    color: #ccc;
+}
+
+body.dark-mode .contact,
 body.dark-mode .contact-details {
-    background-color: #2a2a2a;
+    background-color: #3d4c5c; /* Dark mod için bu renge uygun koyu bir ton */
     color: #e0e0e0;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .contact:hover,
+body.dark-mode .contact-details:hover {
+    background-color: #4a5c6e; /* Dark mode hover'da biraz daha açık */
+    border-color: #80cbc4;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode .contact h3,
@@ -107,17 +292,104 @@ body.dark-mode .contact-details a {
     color: #80cbc4;
 }
 
-/* ===== RESPONSIVE - Kontakt özel ===== */
-@media (max-width: 768px) {
+body.dark-mode .contact a:hover,
+body.dark-mode .contact-details a:hover {
+    color: #a7d9d2;
+}
+
+/* ===== RESPONSIVE TASARIM ===== */
+@media (min-width: 769px) {
     .contact-container {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: stretch;
     }
-    
+
     .contact, .contact-details {
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
+        position: relative;
+    }
+
+    .nav-title {
+        margin-bottom: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        min-width: unset;
         width: 100%;
     }
 
-    .contact-block {
-        padding: 20px;
+    .dropdown-content li a {
+        padding: 5px 0;
+        color: #e0e0e0;
     }
+    
+    body.dark-mode .dropdown-content li a {
+        color: #80cbc4;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 20px 5%;
+    }
+
+    .contact-block {
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    .contact-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact, .contact-details {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .contact h3, .contact-details h3 {
+        font-size: 1.4rem;
+    }
+}
+
+footer {
+    background-color: #004d6e;
+    color: white;
+    text-align: center;
+    padding: 20px 5%;
+    margin-top: auto;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    box-shadow: 0 -4px 8px rgba(255, 255, 255, 0.05);
 }
