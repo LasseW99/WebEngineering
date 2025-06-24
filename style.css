@@ -577,6 +577,13 @@ margin-top: 40px;
     
     
 }
+body.dark-mode .schlarraffen_mitmachencontainer,
+body.dark-mode .sectionleftdiv,
+body.dark-mode .sectionrightdiv,
+body.dark-mode .sectionleft,
+body.dark-mode .sectionright {
+    color: white;
+}
   
 /* Footer */
 footer {
@@ -706,6 +713,10 @@ body.dark-mode .dropdown-content li a:hover {
       color: white;
       text-decoration: none;
     }
+    body.dark-mode .term h2, body.dark-mode p{
+    color: white;
+
+}
 
 
     /*Über uns*/
@@ -813,7 +824,9 @@ body.dark-mode .dropdown-content li a:hover {
     position: relative;
     overflow: hidden;
 }
-
+body.dark-mode .first-paragraph{
+    background-color: #070707;
+}
 .first-paragraph::before {
     content: "";
     position: absolute;
