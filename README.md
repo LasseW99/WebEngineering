@@ -2,7 +2,7 @@ Hallo# WebEngineering
 
 
 
-Team: Lasse Wolter 651153, Mustafa ,Samo, Moritz Gershoff 730494
+Team: Lasse Wolter 651153, Mustafa Tinaz 750056,Samo Haj Hamoud 750056, Moritz Gershoff 730494
 
 ---Unser Dokument darf gerne verwertet werden,die komplette Webseite aber auch einzelne Schnippsel, falls ihnen etwas gefällt---
 

@@ -1,3 +1,6 @@
+
+// JavaScript code
+
 function toggleTheme() {
     const body = document.body;
     const isDark = body.classList.toggle('dark-mode');
@@ -47,6 +50,7 @@ function toggleTheme() {
     });
   });
 
+  // Übersetzungen für das Schlaraffia Lexikon
 const translations = {
       de: {
         title: "Schlaraffia Lexikon",
@@ -127,6 +131,7 @@ const translations = {
       }
     };
 
+    // Initial language setting
     const selector = document.getElementById("language-selector");
     const searchInput = document.getElementById("search");
 

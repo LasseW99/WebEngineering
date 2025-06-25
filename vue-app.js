@@ -1,4 +1,6 @@
 // vue-app.js
+// Vue.js App für die Nachrichtenanzeige
+// Diese App zeigt aktuelle Nachrichten in einem Abschnitt der Webseite an.
 new Vue({
   el: '#aktuelles',
   data: {
@@ -10,6 +12,10 @@ new Vue({
   }
 });
 
+// Vue.js App für die Bildergalerie
+// Diese App zeigt Bilder in einem Karussell an, das durch Klicken auf "Vor" und "Zurück" navigiert werden kann.
+// Die Bilder werden aus einem Array geladen und der Index wird aktualisiert, um das aktuelle Bild anzuzeigen.
+// Die Bilder sind in verschiedenen Ordnern organisiert, die jeweils eine eigene Galerie darstellen.
 new Vue({
   el: '#app',
   data: {
