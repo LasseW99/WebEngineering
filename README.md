@@ -1,4 +1,11 @@
 Hallo# WebEngineering
+
+
+
+Team: Lasse Wolter 651153, Mustafa ,Samo, Moritz Gershoff 730494
+
+---Unser Dokument darf gerne verwertet werden,die komplette Webseite aber auch einzelne Schnippsel, falls ihnen etwas gefällt---
+
 Flensburgia – Offizielle Website
 Willkommen im Reych der Schlaraffia Flensburgia. Diese Website präsentiert die Philosophie, Aktivitäten und den Geist der Schlaraffen in einem modernen, responsiven Webdesign.
 
